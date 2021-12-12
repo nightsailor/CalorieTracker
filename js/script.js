@@ -28,7 +28,7 @@ window.onscroll = () =>{
 
 }
 
-var swiper = new Swiper(".reviews-slider", {
+var swiper = new Swiper(".blogs-slider", {
   spaceBetween: 10,
   grabCursor:true,
   loop:true,

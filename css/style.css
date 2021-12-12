@@ -87,16 +87,16 @@ section {
 .btn:hover {
   background: var(--dark-color);
 }
-
+/*=============== header start ===============*/
 .header .logo {
   font-size: 2.5rem;
   font-weight: bolder;
   color: var(--black);
 }
 
-/* .header  .logo i:hover{
-    color:var(--green);
-} */
+.header  .logo i:hover{
+    color:#fff;
+}
 
 .header .icons div {
   font-size: 2.5rem;
@@ -260,7 +260,9 @@ section {
   color: var(--black);
   cursor: pointer;
 }
+/*=============== header end ===============*/
 
+/*=============== home start ===============*/
 .home {
   background: url(../image/banner-bg.jpg) no-repeat;
   background-size: cover;
@@ -308,8 +310,11 @@ section {
   line-height: 2;
   padding: 1rem 0;
 }
+/*=============== home end ===============*/
 
-.icons-container {
+/*=============== services start ===============*/
+.icons-container .row {
+  padding-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
@@ -340,6 +345,12 @@ section {
   color: var(--light-color);
 }
 
+.icons-container .icons:hover{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+/*=============== services end ===============*/
+
+/*=============== twilio start ===============*/
 .newsletter {
   background: url(../image/bg7.jpg) no-repeat;
   background-size: cover;
@@ -370,7 +381,31 @@ section {
   border-radius: 0.5rem;
   text-transform: none;
 }
+/*=============== twilio end ===============*/
 
+/*=============== swiper start ===============*/
+.swiper-button-next,
+.swiper-button-prev{
+    border:var(--border-hover);
+    height:4rem;
+    width:4rem;
+    color:var(--black);
+    background: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    background: var(--black);
+    color:#fff;
+}
+/*=============== swiper end ===============*/
+
+/*=============== calorie calculator start ===============*/
 .deal {
   background: #f3f3f3;
   display: flex;
@@ -408,47 +443,52 @@ section {
   font-size: 1.4rem;
   line-height: 2;
 }
+/*=============== calorie calculator end ===============*/
 
-.reviews .reviews-slider .box {
-  border: var(--border);
-  padding: 2rem;
-  text-align: center;
-  margin: 2rem 0;
+/*=============== exercise start ===============*/
+.blogs .blogs-slider .box{
+  margin:2rem 0;
+  border:var(--border);
 }
 
-.reviews .reviews-slider .box:hover {
-  border: var(--border-hover);
+.blogs .blogs-slider .box:hover{
+  border:var(--border-hover);
 }
 
-.reviews .reviews-slider .box img {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
+.blogs .blogs-slider .box .image{
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blogs .blogs-slider .box .image img{
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
-.reviews .reviews-slider .box h3 {
-  color: var(--black);
-  font-size: 2.2rem;
-  padding: 0.5rem 0;
+.blogs .blogs-slider .box:hover .image img{
+  transform: scale(1.1);
 }
 
-.reviews .reviews-slider .box p {
-  color: var(--light-color);
+.blogs .blogs-slider .box .content{
+  padding:1.5rem;
+}
+
+.blogs .blogs-slider .box .content h3{
+  font-size: 2.2rem;
+  color:var(--black);
+}
+
+.blogs .blogs-slider .box .content p{
   font-size: 1.4rem;
-  padding: 1rem 0;
+  color:var(--light-color);
+  padding:1rem 0;
   line-height: 2;
 }
+/*=============== exercise end ===============*/
 
-.reviews .reviews-slider .box .stars {
-  padding-top: 0.5rem;
-}
-
-.reviews .reviews-slider .box .stars i {
-  font-size: 1.7rem;
-  color: var(--green);
-}
-
+/*=============== footer start ===============*/
 .footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -507,9 +547,9 @@ section {
 .footer .credit span {
   color: var(--green);
 }
+/*=============== footer end ===============*/
 
-/* media queries  */
-
+/*=============== media start ===============*/
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -555,7 +595,9 @@ section {
     font-size: 50%;
   }
 }
+/*=============== media end ===============*/
 
+/*=============== custom start ===============*/
 .header .search-bar-container {
   position: absolute;
   top: 100%;
@@ -594,18 +636,13 @@ header .search-bar-container label:hover {
   color: var(--orange);
 }
 
-.content .btn {
+.home .content .btn {
   margin-top: 5vh;
 }
 
 .home .row {
-  padding-bottom: 5vh;
-  padding-top: 5vh;
-  height: 100%;
-}
-
-.home {
-  height: 90vh;
+  padding: 10% 0;
+  height: fit-content;
 }
 
 .footer .box-container .box p {
@@ -618,9 +655,9 @@ section.footer {
   padding-bottom: 1rem;
 }
 
-.box:nth-child(2),
-.box:nth-child(3),
-.box:nth-child(4) {
+.footer .box:nth-child(2),
+.footer .box:nth-child(3),
+.footer .box:nth-child(4) {
   margin-left: 5vw;
 }
 
@@ -631,7 +668,9 @@ section.footer {
   align-items: center;
   text-align: center;
 }
+/*=============== custom end ===============*/
 
+/*=============== contact start ===============*/
 .contact .row{
   display: flex;
   flex-wrap: wrap;
@@ -685,4 +724,69 @@ section.footer {
 
 .contact{
 	padding-bottom: 0;
+}
+/*=============== contact end ===============*/
+
+/*=============== gallery start ===============*/
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:1rem solid #fff;
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0,0,0,.7);
+  padding:2rem;
+  /* padding-top: 5rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+.gallery .box-container .box .content h3{
+  /* font-size: 2.5rem; */
+  font-size: 2rem;
+  color:var(--green);
+}
+
+.gallery .box-container .box .content p{
+  /* font-size: 1.5rem; */
+  font-size: 1.3rem;
+  color:#eee;
+  padding:.5rem 0;
+}
+
+.gallery .btn{
+  border-radius: 0;
+}
+/*=============== gallery end ===============*/
+
+.blogs .content{
+  /* display: none; */
 }
